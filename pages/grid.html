@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+
+            <p><a href="/pages/html.html">html</a></p>
+
+            <p><a href="/pages/flexbox.html">flexbox</a></p>
+
+            <p><a href="/pages/tailwind.html">tailwind</a></p>
+
+            <p><a href="/pages/bootstrap.html"> bootstrap </a></p>
+          
+            <p><a href="/pages/grid.html"> Grid </a></p>
+
+        </nav>
+    </header>
+
+
+    <main style="padding-bottom:10rem ;">
+        <h1>Grid css</h1>
+
+        <p>Css Grid est un puissant système de mise en page css qui permet des créer des designs complexe en deux dimension (ligne et colonne) </p>
+
+        <p> structure en lignes et colonnes</p>
+
+        <h4>les éléments clés</h4>
+
+        <p>grid-container : element parent qui contient la grille</p>
+
+        <p>grid-items les enfant du grid-container</p>
+
+        <h4>ligne et colonne</h4>
+        <p>grid-template-columns est la colonne et peut utiliser <strong> fr (fraction), auto ( taile auto) ou taille fixe (px, em..)</strong></p>
+
+        <p>grid-template-rows permet de définir la hauteur des lignes dans un container</p>
+
+
+ <h4>Display grid</h4>
+<div>
+    <div class="grid-container">
+       <div class="item">1</div>
+       <div class="item">2</div>
+       <div class="item">3</div>
+       <div class="item">4</div>
+       <div class="item">5</div>
+       <div class="item">6</div>
+    </div>
+    
+</div>
+
+ <h4>grid template areas</h4>
+
+ <div class="container">
+    <div class="header">
+        <h2>Header </h2>
+    </div>
+    <div class="menu">
+        menu
+    </div>
+    <div class="content">
+        <h3>titre</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati, culpa perspiciatis nostrum quam facere quia, corrupti nemo quo incidunt id consectetur voluptates necessitatibus. Atque expedita ducimus in assumenda nam.</p>
+
+    </div>
+    <div class="footer">
+        <h4>footer</h4>
+    </div>
+ </div>
+
+
+ <h4> grid columns et row</h4>
+
+ <div class="contain">
+
+  <div class="items item1">1</div>
+  <div class="items item2">2</div>
+  <div class="items item3">3</div>
+  <div class="items item4">4</div>
+  <div class="items item5">5</div>
+  <div class="items item6">6</div>
+
+
+ </div>
+
+ <h2>exercices</h2>
+
+ <h4>exercice 1</h4>
+
+ <p>consigne </p>
+ <p>creez une grille de 3 colonne</p>
+ <p>le première colonne doit occuper 1 fraction de l'espace la deuxieme 2 fractions et la 3eme colonne 1 fraction</p>
+ <p>donnez à chaque colonne une couleur de fond</p>
+
+
+ <div class="grid-container2">
+    <div class="grid-item2">Colonne 1 (1fr)</div>
+    <div class="grid-item2">Colonne 2 (2fr)</div>
+    <div class="grid-item2">Colonne 3 (1fr)</div>
+ </div>
+ grid-template-rows: 100px;
+     grid-template-areas:
+ <div class="wrapper">
+ <div class="item1">Objet 1</div>
+</div>
+
+<h4>exercice 2</h4>
+
+<p>Creez une ligne avec 3 colonnes de même fraction    </p>
+
+<p>chaque colonnes doit contenir un titre avec une couleur, du texte (3 paragraphe) et un bouton écris "choisir" </p>
+
+
+<div class="grid-box">
+    <div class="grid-box-item">
+        <h2 class="item-title">Basic</h2>
+        <ul class="item-ul">
+            <li>
+                20 gb strorage
+            </li>
+            <li class="item-ul">
+                1 domain
+            </li>
+            <li class="item-ul">
+                email support
+            </li>
+        </ul>
+        <button class="item-bouton">
+                 choisir
+        </button>
+    </div>
+    <div class="grid-box-item">
+        <h2 class="item-title">Basic</h2>
+        <ul class="item-ul">
+            <li>
+                20 gb strorage
+            </li>
+            <li class="item-ul">
+                1 domain
+            </li>
+            <li class="item-ul">
+                email support
+            </li>
+        </ul>
+        <button class="item-bouton">
+                 choisir
+        </button>
+    </div>
+    <div class="grid-box-item">
+        <h2 class="item-title">Basic</h2>
+        <ul class="item-ul">
+            <li>
+                20 gb strorage
+            </li>
+            <li class="item-ul">
+                1 domain
+            </li>
+            <li class="item-ul">
+                email support
+            </li>
+        </ul>
+        <button class="item-bouton">
+                 choisir
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+       
+    </main>
+
+</body>
+</html>

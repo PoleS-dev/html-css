@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>cour3</title>
+</head>
+<body>
+    <style>
+        /* Styles de secours pour les clients modernes */
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      </style>
+    <header>
+        <nav>
+
+            <p><a href="/pages/html.html">html</a></p>
+
+            <p><a href="/pages/flexbox.html">flexbox</a></p>
+
+            <p><a href="/pages/tailwind.html">tailwind</a></p>
+
+            <p><a href="/pages/bootstrap.html"> bootstrap </a></p>
+
+        </nav>
+    </header>
+
+    <main >
+        <h1>page html</h1>
+        <section>
+            <article>
+                <h3>tableau</h3>
+
+                <p>
+                    un tableau commence toujour par la balise <strong> table</strong>
+                </p>
+
+                <p> la balise <strong>tr</strong> qui représente un  ligne </p>
+
+                <p>la balise <strong>th</strong> (table header) est l'en tête des titres des colonnes ou ligne </p>
+
+                <p>la balise <strong> td</strong >
+                table data est l'intérieur d'une cellule
+                </p>
+
+                <p> la balise <strong>thead</strong> regroupe toutes les lignes d'en tête ( th)  </p>
+
+                <p> la balise <strong>tbody</strong> représente le corps du tableau, les données du tableau </p>
+
+                <p>la balise <strong>tfoot</strong> le bas du tableau pour les totaux les moyennes....</p>
+
+
+                <table>
+                    <caption>
+                        je suis la légende du tableau
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th>Personnes</th>
+                            <th>Compétences</th>
+                            <th>age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>Personne 1</td>
+                            <td> HTML</td>
+                            <td>15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Personne 2 </td>
+                            <td>web responsive</td>
+                            <td>25</td>
+                        </tr>
+
+                        <tr>
+                            <td>Personne 3 </td>
+                            <td>javascript</td>
+                            <td>50</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th colspan="2" > total</th>
+                            <td>43</td>
+                        </tr>
+                    </tfoot>
+
+
+
+                </table>
+    
+                <table>
+                    <caption>je suis la légende du tableau</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Personne</th>
+                            <th scope="col">Compétences</th>
+                            <th scope="col">Age</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Personne 1</td>
+                            <td>HTML</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>Personne 2</td>
+                            <td>web responsive</td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <td>Personne 3</td>
+                            <td>javascript</td>
+                            <td>45</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2">total moyenne age</th>
+                            <td>34</td>
+
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </article>
+
+
+
+
+        </section>
+
+        <section style="margin-top: 3rem;">
+            <table width="100%" bgcolor="#f4f4f4" cellpadding="0" cellspacing="0">
+                <!-- En-tête de la newsletter -->
+                <tr>
+                  <td align="center">
+                    <table width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin: 20px auto; border-radius: 8px; overflow: hidden;">
+                      <!-- Logo ou titre -->
+                      <tr>
+                        <td align="center" style="padding: 20px; background-color: #333; color: #ffffff;">
+                          <h1 style="margin: 0; font-size: 24px;">Votre Newsletter</h1>
+                        </td>
+                      </tr>
+                      <!-- Image principale -->
+                      <tr>
+                        <td align="center" style="padding: 0;">
+                          <img src="https://via.placeholder.com/600x300" alt="Image principale" width="600" style="display: block; border: none;">
+                        </td>
+                      </tr>
+                      <!-- Corps de la newsletter -->
+                      <tr>
+                        <td style="padding: 20px; color: #333333; font-size: 16px; line-height: 1.5;">
+                          <h2 style="margin: 0 0 10px;">Bonjour,</h2>
+                          <p style="margin: 0 0 10px;">Voici les dernières nouvelles de notre entreprise. Nous avons travaillé dur pour améliorer nos services et vous offrir la meilleure expérience possible.</p>
+                          <p style="margin: 0;">Découvrez nos dernières offres et innovations en cliquant sur le bouton ci-dessous.</p>
+                        </td>
+                      </tr>
+                      <!-- Bouton d'appel à l'action -->
+                      <tr>
+                        <td align="center" style="padding: 20px;">
+                          <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #ffffff; text-decoration: none; font-size: 16px; border-radius: 4px;">Voir nos offres</a>
+                        </td>
+                      </tr>
+                      <!-- Pied de page -->
+                      <tr>
+                        <td align="center" style="padding: 10px; background-color: #f4f4f4; color: #666666; font-size: 12px;">
+                          <p style="margin: 0;">Vous recevez cet email parce que vous êtes inscrit à notre newsletter.</p>
+                          <p style="margin: 0;">&copy; 2025 Votre Entreprise. Tous droits réservés.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer>
+
+
+        <div class="footer__item">
+            <div class="footer__content">
+                <ul>
+                    <li>accueil</li>
+                    <li>bootstrap</li>
+                    
+                </ul>
+            </div>
+            <div class="footer__content">
+                <ul>
+                    <li>html</li>
+                    <li>flex-box</li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+
+    </footer>
+
+
+
+    
+</body>
+</html>

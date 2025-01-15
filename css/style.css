@@ -1,0 +1,121 @@
+@import url(/css/flexbox.css);
+@import url(/css/html.css);
+@import url(/css/grid/grid.css);
+@import url(/css/index.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+    padding-top: 20px;
+
+}
+
+header{
+    display: flex ;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid violet;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid rgb(32, 32, 31);
+    width: 50%;
+    padding: 5px;
+  
+  
+    
+}
+
+a{
+    
+    border: 1px rgb(26, 24, 24) solid;
+    padding: 5px;
+    
+    
+}
+a:hover{
+    background-color: darkgray;
+    color: beige;
+}
+h1{
+    border-bottom: 2px solid black;
+    
+}
+h3{
+    opacity: 0.6;
+    margin: 0.5rem;
+}
+
+p{
+    padding: 5px;
+}
+main{
+    flex: 1;
+ 
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 90%;
+    margin: auto;
+    border: 1px solid blue;
+    
+}
+
+
+footer{
+    width: 100%;
+    color: white;
+    height: 5rem;
+    background-color: rgb(114, 114, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__item{
+    display: flex;
+    gap: 20px;
+    width: 50%;
+    border: 1px solid red;
+    justify-content: space-around;
+}
+.footer__content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+}
+.footer__content ul{
+    
+    border: 2px solid black;
+}
+
+h4{
+    border-bottom: 1px black solid;
+    padding: 2px;
+    margin: 10px;
+}
+
+
+
+
+
+
+

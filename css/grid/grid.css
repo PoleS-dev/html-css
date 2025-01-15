@@ -1,0 +1,227 @@
+.grid-container{
+    display:grid;
+    /*gri-template-comums spécifie la taille de colonnes  */
+    /* grid-template-columns: 100px 200px 150px  ; */
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 100px 500px;
+    
+
+    
+   
+
+    padding-bottom: 10rem;
+}
+
+
+.item{
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+
+/* ************ grid template areas************** */
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "menu content"
+    "footer footer"
+    ;
+
+    grid-template-columns: 1fr 3fr ;
+    gap: 5px;
+    background-color: #2196F3;
+    padding: 5px;
+
+}
+
+
+.container > div{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+
+}
+
+.container > div.header{
+    /* j'assigne le nom "header" du grid-template-area a la class header  */
+  grid-area: header;  
+  text-align: center;
+
+}
+
+.container >div.menu{
+    grid-area: menu;
+
+}
+
+.container >div.footer{
+    grid-area: footer;
+}
+
+
+/* ************************ */
+
+.contain{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,100px);
+    gap: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+
+}
+.items{
+    border: 1px solid black;
+}
+
+/* positionnement spécifique avec grid-column et grid-row  */
+
+.item1{
+/* de la colonne 1 à 2 avant le 3 */
+    grid-column: 1/3;
+    grid-row:1/2;
+}
+
+.item2{
+    grid-column: 3/5;
+    grid-row: 1/3
+}
+
+.item3{
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+.item4{
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+.truc{
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    display:none;
+}
+
+
+/* ******exrcice 1***** */
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.grid-item2{
+    padding: 20px;
+    text-align: center;
+font-size: 18px;
+color: white;
+border-radius: 5px;
+}
+
+/* couleur pour chaque div */
+
+.grid-item2:nth-child(1){
+    background-color: #007BFF;
+}
+.grid-item2:nth-child(2){
+    background-color: #28A745;
+}
+.grid-item2:nth-child(3){
+    background-color: #FFC107;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+grid-template-rows: 100px;
+    grid-template-areas:
+    ". a a ."
+    ". a a .";
+    background-color: #a2cfad;
+}
+
+.item1 {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    background-color: #e7a132;
+    padding: 20px;
+  }
+
+
+  /* ****** exercice 2 ************ */
+
+
+.grid-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+    margin: 0;
+
+}
+
+.grid-box-item{
+
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid-box-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007BFF;
+
+}
+
+.item-ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+
+}
+
+.item-ul li{
+    margin-bottom: 10px;
+}
+
+.item-bouton{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item-bouton:hover{
+    background-color: #0056b3;
+}
+
+
+
+
+

@@ -1,0 +1,46 @@
+.container__flex{
+border: 1px solid black;
+
+}
+
+.box{
+    background-color: rgb(168, 230, 230);
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    
+
+}
+
+
+.container__flex2{
+    display: flex;
+  
+}
+.container__flex3{
+    display: flex ;
+    justify-content: center;
+    height: 5rem;
+}
+
+.container__flex4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+.flex5__box1{
+    align-self: flex-end;
+}
+
+.flex5__box3{
+    align-self: flex-start;
+}
+.box1{
+     padding: 3px;
+     border: 1px solid red;
+}
+.flex1{
+    flex: 1;
+}

@@ -1,0 +1,115 @@
+.body {
+  display: grid;
+  grid-template-areas:
+    "banner banner banner"
+    "menu content sidebar"
+    "footer footer footer";
+  grid-template-columns: 0.5fr 3fr 1fr; /* Largeurs relatives */
+  grid-template-rows: auto 1fr auto; /* Hauteurs flexibles */
+  min-height: 100vh;
+  gap: 10px; /* Espacement entre les sections */
+  padding: 10px;
+}
+
+.banner {
+grid-area: banner;
+height: 5rem;
+background-position: center;
+background-image: url(./images/baltic-sea-7434540_1280.jpg);
+color: white;
+text-align: center;
+padding: 20px;
+font-size: 24px;
+}
+
+.menu {
+grid-area: menu;
+background-color: #28A745;
+color: white;
+padding: 20px;
+}
+
+.content {
+grid-area: content;
+background-color: #FFC107;
+color: black;
+padding: 20px;
+}
+
+.sidebar {
+grid-area: sidebar;
+background-color: #17A2B8;
+color: white;
+padding: 20px;
+}
+
+.footer {
+grid-area: footer;
+background-color: #6C757D;
+color: white;
+text-align: center;
+padding: 20px;
+font-size: 16px;
+}
+
+
+.header-index{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.nav-index{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left:10px ;
+ 
+ 
+}
+
+.nav-index p{
+  
+  align-self: self-start;
+}
+
+
+/* **********responsive********* */
+
+@media screen and (max-width:768px) {
+  .body{
+
+    grid-template-areas:
+    "banner banner"
+    "menu menu "
+    "content  sidebar"
+    "footer footer ";
+    grid-template-columns:  3fr 1fr;
+
+  }
+
+.nav-index{
+  
+  gap: 20px;
+  flex-direction: row;
+}
+.nav-index p{
+font-size: 1rem !important;
+}
+
+}
+@media screen and (max-width:480px) {
+
+  .body{
+
+    grid-template-areas:
+    "banner"
+    "menu  "
+    "content"
+    "sidebar"
+    "footer  ";
+    grid-template-columns:  1fr;
+
+  }
+  
+}
