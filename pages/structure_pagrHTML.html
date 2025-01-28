@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisation d'une Page HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+        
+        /* Header */
+        header {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #343a40;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        
+        /* Main Section */
+        main {
+            padding: 20px;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Divs dans Sections */
+        .content-box {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+        .box1 { background: #ff5733; } /* Rouge */
+        .box2 { background: #33c3ff; } /* Bleu */
+        .box3 { background: #28a745; } /* Vert */
+        .box4 { background: #ffc107; } /* Jaune */
+        
+        /* Cartes */
+        .card {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 10px 0;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 15px;
+            }
+            .content-box {
+                font-size: 14px;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Organisation d'une Page HTML</h1>
+    </header>
+    
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">À Propos</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Section 1 : Introduction</h2>
+            <div class="content-box box1">Cette div a un fond rouge</div>
+            <div class="content-box box2">Cette div a un fond bleu</div>
+            <div class="card">
+                <div class="card-title">Carte 1</div>
+                <div class="card-text">Texte descriptif de la carte 1</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Section 2 : Contenu</h2>
+            <div class="content-box box3">Cette div a un fond vert</div>
+            <div class="content-box box4">Cette div a un fond jaune</div>
+            <div class="card">
+                <div class="card-title">Carte 2</div>
+                <div class="card-text">Texte descriptif de la carte 2</div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Mon Site - Tous droits réservés</p>
+    </footer>
+    
+</body>
+</html>

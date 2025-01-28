@@ -90,11 +90,13 @@ font-size: 16px;
 
 .nav-index{
   
-  gap: 20px;
+  gap: 10px;
   flex-direction: row;
+  flex-wrap: wrap;
+
 }
 .nav-index p{
-font-size: 1rem !important;
+font-size: 1.2rem !important;
 }
 
 }
