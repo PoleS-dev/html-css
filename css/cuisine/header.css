@@ -1,0 +1,11 @@
+
+
+header{
+    height: 5%;
+}
+
+header nav p a{
+    color: var(--dark) ;
+ 
+}
+

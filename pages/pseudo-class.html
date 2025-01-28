@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours sur les Pseudo-classes en CSS</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #333; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 5px; }
+        .example { background: #e8e8e8; padding: 10px; border-left: 5px solid #333; }
+        
+        /* Pseudo-classes */
+        a:hover { color: red; }
+        input:focus { background-color: lightyellow; }
+        button:active { background-color: green; color: white; }
+        
+        /* Pseudo-éléments */
+        p::before {
+             content: "★ ";
+              color: gold;
+         }
+        p::after { content: " ✿";
+           color: pink;
+         }
+
+
+         .ddo::before{
+            content: "before";
+            margin: .5rem;
+            color: red;
+         }
+         .dd::before{
+          content: "before";
+          margin: 1rem;
+         }
+
+
+    </style>
+</head>
+<body>
+    <h1>Cours sur les Pseudo-classes en CSS</h1>
+    <p>Les pseudo-classes en CSS permettent de styliser des éléments dans un état particulier, comme lorsqu'un utilisateur passe la souris dessus ou lorsqu'un champ de formulaire est actif.</p>
+    
+    <h2>Exemples de Pseudo-classes</h2>
+    <ul>
+        <li><code>:hover</code> - S'applique lorsqu'un utilisateur survole un élément.</li>
+        <li><code>:focus</code> - S'applique lorsqu'un élément, comme un champ de saisie, est activé.</li>
+        <li><code>:nth-child(n)</code> - Cible un élément en fonction de sa position parmi ses frères.</li>
+        <li><code>:first-child</code> - Sélectionne le premier enfant d'un élément parent.</li>
+        <li><code>:last-child</code> - Sélectionne le dernier enfant d'un élément parent.</li>
+        <li><code>:checked</code> - S'applique aux éléments cochés (cases à cocher, boutons radio).</li>
+        <li><code>:active</code> - S'applique lorsqu'un élément est activé (ex: un bouton cliqué).</li>
+    </ul>
+    
+    <h2>Exemples de Pseudo-éléments</h2>
+    <ul>
+        <li><code>::before</code> - Ajoute un contenu avant un élément.</li>
+        <li><code>::after</code> - Ajoute un contenu après un élément.</li>
+    </ul>
+    
+    <h2>Exemples Pratiques</h2>
+    <div class="example">
+        <p>Survolez le lien ci-dessous :</p>
+        <a href="#">Lien d'exemple</a>
+        <p>Cliquez dans le champ ci-dessous :</p>
+        <input type="text" placeholder="Tapez ici...">
+        <p>Cliquez sur le bouton :</p>
+        <button>Appuyez ici</button>
+        <p>Texte avec ::before et ::after</p>
+    </div>
+
+
+    <div class="ddo">
+        <button class="dd">tex</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "nom": "T-shirt Homme",
+        "categorie": "Haut",
+        "prix": 19.99,
+        "stock": 50,
+        "taille": ["S", "M", "L", "XL"],
+        "couleur": ["Blanc", "Noir", "Bleu"],
+        "image": "https://example.com/tshirt-homme.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Jean Slim Femme",
+        "categorie": "Bas",
+        "prix": 39.99,
+        "stock": 30,
+        "taille": ["XS", "S", "M", "L"],
+        "couleur": ["Bleu clair", "Noir"],
+        "image": "https://example.com/jean-femme.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "Chaussures de Sport",
+        "categorie": "Chaussures",
+        "prix": 59.99,
+        "stock": 20,
+        "taille": [38, 39, 40, 41, 42, 43, 44],
+        "couleur": ["Rouge", "Noir", "Blanc"],
+        "image": "https://example.com/chaussures-sport.jpg"
+    },
+    {
+        "id": 4,
+        "nom": "Sweat à Capuche",
+        "categorie": "Haut",
+        "prix": 29.99,
+        "stock": 40,
+        "taille": ["M", "L", "XL"],
+        "couleur": ["Gris", "Noir", "Bleu marine"],
+        "image": "https://example.com/sweat-capuche.jpg"
+    },
+    {
+        "id": 5,
+        "nom": "Veste en Cuir",
+        "categorie": "Veste",
+        "prix": 99.99,
+        "stock": 10,
+        "taille": ["S", "M", "L"],
+        "couleur": ["Noir", "Marron"],
+        "image": "https://example.com/veste-cuir.jpg"
+    }
+]

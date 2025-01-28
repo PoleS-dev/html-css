@@ -1,0 +1,78 @@
+@import "main/header_main";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+ background-color: #E4E6F1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 20px;
+ padding: 0 5rem 0 5rem;
+ @media screen and (min-whith:1650px) {
+    padding-left: 50rem !important;
+    padding-right: 50rem;
+ }
+
+}
+
+main{
+    gap: 5rem;
+}
+
+section{
+}
+
+
+.btn{
+
+    padding: 15px;
+    border-radius: 25px; 
+    box-shadow: 1px 1px 1px 1px;
+}
+.btn-black{
+    display: flex ;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    div{
+width: 20px;
+height: 20px;
+background-color: #E4E6F1;
+border-radius: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+
+div{
+    width: 5px;
+    height: 5px;
+    background-color: #131314;
+    border-radius: 0;
+    
+}
+
+    }
+}
+.containe-btn-title{
+
+
+
+    .btn-title{
+        padding: 10px;
+        box-shadow: 1px 1px 1px .5px;
+    }
+}
+
+
+
+
+

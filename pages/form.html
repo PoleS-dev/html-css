@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>formulaire </title>
+
+</head>
+<body>
+
+    <style>
+
+        .text{
+            position: relative;
+        }
+      
+    </style>
+
+
+    <main>
+       <h1>fotmualire de contact</h1>
+
+       <form style="display: flex; flex-direction: column; width: 50%; margin: auto;"  method="POST">
+        <label for=""> Nom : </label>
+        <input type="text" id="nom" name="nom" >
+
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="sujet"> Sujet :</label>
+        <select name=" sujet" id="sujet" required>
+            <option value="">selctionnez un sujet</option>
+            <option value="question">Questions</option>
+            <option value="demande">Demande</option>
+            <option value="autre">Autre</option>
+
+        </select>
+
+        <label for="message" >Message :</label>
+        <textarea name="massage" id="message" rows="4"></textarea>
+
+
+        <button type="submit">Envoyer</button>
+
+
+
+       </form>
+
+       <section>
+        <p>
+            Les formulaires HTML permettent aux users d'envoyer des données a un serveur.
+        </p>
+
+        <h2> 1. Structure d'un formulaire </h2>
+
+        <p> Un formumaire est defini par  la balise <code>form</code></p>
+
+        <h3>Explication des attributs</h3>
+        <p><strong><code>name</code></strong> : Cet attribut est utilisé pour identifier un champ du formulaire. Quand le formulaire est soumis, les données sont envoyées sous form de paire clé-valeur où le <code>name</code> est la clé.</p>
+
+        <p><strong><code>label for</code> </strong>: l'attribut <code>for</code> du label est utilisé pour associer un libellé à un champs via son <code>id</code></p>
+
+        <h2>2. Type de champs</h2>
+
+        <p>HTML offre plusieurs types de champs :</p>
+
+        <p><code>text</code>-- Champs de texte</p>
+        <p><code>email</code>-- Champs de email</p>
+        <p><code>password</code>-- Champs de password</p>
+        <p><code>radio</code>-- boutons radio</p>
+        <p><code>textarea</code>-- zone de text</p>
+        <p><code>checkbox</code>-- case à cocher</p>
+        <p><code>number</code>-- entrée numérique</p>
+        <p><code>file </code>-- upload de fichiers</p>
+        <p><code>submit </code>-- bouton d'envoi</p>
+
+
+<h3>exo : faire son formualire -> champs nom, champs prenom, champs textarea, bouton submit et amusez vous à custom avec css</h3>
+
+       </section>
+       <section>
+        <h2>4. SEO et les formulaires HTML</h2>
+        <P> Les formulaires jouent un rôle important en SEO, notamment pour l'experience utilisateur et l'accessibilité </P>
+
+        <p><strong> label et for</strong> : améliorent l'accécibilité et la lisibilité pour les moteurs de rechrche</p>
+        <p><strong> input=name</strong> : les champs bien nommés aident les outils d'analyse du site </p>
+        
+        <p><strong> l'attribut <code>placeholder</code> </strong> : fournit des indices visuels aux utilisateurs sans remplacer le label</p>
+
+        <h3>Exemple de formulaire optimisé SEO :</h3>
+        <pre>
+    &lt;form action="traitement.php" method="POST"&gt;
+        &lt;label for="nom"&gt;Nom:&lt;/label&gt;
+        &lt;input type="text" id="nom" name="nom" placeholder="Votre nom" required&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" placeholder="Votre email" required&gt;
+        
+        &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+    &lt;/form&gt;
+        </pre>
+    </section>
+
+    <section>
+        <form action="" class="textName">
+            <label for="" class=""> nom</label>
+            <input class="text" type="text" placeholder="nom" >
+            <i class="fa-solid fa-person"></i>
+        
+     
+        </form>
+    </section>
+
+        
+    </main>
+
+    
+
+
+</body>
+</html>

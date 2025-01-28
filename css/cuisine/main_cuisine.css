@@ -1,0 +1,179 @@
+section:nth-child(1) {
+  height: 500px;
+}
+section:nth-child(1) .section_box {
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+}
+section:nth-child(1) .section-box-image {
+  background-image: url(/images/cuisine/c1.png);
+  background-position: right;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.b-text {
+  height: 100%;
+}
+
+.section-header-logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: black;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+}
+
+.john {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.categorie-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px;
+  gap: 10px;
+}
+.categorie-box .categorie-item img {
+  width: 5.4rem;
+}
+
+.btn-cat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(92, 243, 243, 0.1);
+}
+
+section:nth-child(3) {
+  border: 1px solid;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 22rem));
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+}
+.card .card-content {
+  overflow: hidden;
+  border-radius: 20px;
+  height: 100%;
+  background-color: bisque;
+  position: relative;
+}
+.card .card-content .coeur {
+  position: absolute;
+  background-color: rgb(248, 233, 233);
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 5%;
+  right: 5%;
+  border-radius: 50%;
+}
+.card .card-content .coeur div {
+  background-color: red;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+.card .card-content div:nth-child(3) {
+  padding-top: 10px;
+}
+.card .card-content .img-card {
+  width: 100%;
+  height: 60%;
+  background-color: rgb(58, 119, 99);
+  border-radius: 15px;
+  height: 15rem;
+}
+
+.logo-recette {
+  background-color: black;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+p {
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E4E6F1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 5rem 0 5rem;
+}
+@media screen and (min-whith: 1650px) {
+  body {
+    padding-left: 50rem !important;
+    padding-right: 50rem;
+  }
+}
+
+main {
+  gap: 5rem;
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 1px;
+}
+
+.btn-black {
+  display: flex;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-black div {
+  width: 20px;
+  height: 20px;
+  background-color: #E4E6F1;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.btn-black div div {
+  width: 5px;
+  height: 5px;
+  background-color: #131314;
+  border-radius: 0;
+}
+
+.containe-btn-title .btn-title {
+  padding: 10px;
+  box-shadow: 1px 1px 1px 0.5px;
+}
+
+/*# sourceMappingURL=main_cuisine.css.map */

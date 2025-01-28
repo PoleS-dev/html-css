@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Git et GitHub</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 5px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Guide Git et GitHub</h1>
+    
+    <h2>1. Installation de Git</h2>
+    <p>Installez Git selon votre système :</p>
+    <ul>
+        <li><strong>Windows :</strong> Télécharger et installer depuis <a href="https://git-scm.com/">git-scm.com</a></li>
+        <li><strong>MacOS :</strong> Utiliser la commande <code>brew install git</code></li>
+        <li><strong>Linux :</strong> Utiliser la commande <code>sudo apt install git</code> (Ubuntu/Debian) ou <code>sudo dnf install git</code> (Fedora)</li>
+    </ul>
+    
+    <h2>2. Création d’un dépôt Git</h2>
+    <pre><code>git init</code></pre>
+    <p>Cette commande initialise un dépôt Git dans le dossier actuel.</p>
+    
+    <h2>3. Ajouter et valider les modifications</h2>
+    <pre><code>git add .</code></pre>
+    <pre><code>git commit -m "Premier commit"</code></pre>
+    <p>Ajoute tous les fichiers et enregistre un commit avec un message.</p>
+    
+    <h2>4. Connexion à GitHub et création d’un dépôt distant</h2>
+    <pre><code>git remote add origin https://github.com/utilisateur/mon-depot.git</code></pre>
+    <p>Associe votre dépôt local à GitHub.</p>
+    
+    <h2>5. Envoi du code sur GitHub</h2>
+    <pre><code>git push -u origin main</code></pre>
+    
+    <h2>6. Collaboration en groupe</h2>
+    <ul>
+        <li><strong>Cloner un dépôt :</strong> <pre><code>git clone https://github.com/utilisateur/mon-depot.git</code></pre></li>
+        <li><strong>Créer une nouvelle branche :</strong> <pre><code>git checkout -b ma-branche</code></pre></li>
+        <li><strong>Mettre à jour son dépôt local :</strong> <pre><code>git pull origin main</code></pre></li>
+        <li><strong>Envoyer ses modifications :</strong> <pre><code>git push origin ma-branche</code></pre></li>
+        <li><strong>Créer une pull request sur GitHub</strong></li>
+    </ul>
+    
+    <h2>7. Travailler à plusieurs sur un même projet</h2>
+    <p>Voici les étapes pour collaborer efficacement :</p>
+    <ol>
+        <li>Un membre crée un dépôt sur GitHub et ajoute les autres comme collaborateurs.</li>
+        <li>Chaque membre clone le dépôt avec <code>git clone</code>.</li>
+        <li>Avant de commencer, synchroniser le dépôt local avec <code>git pull origin main</code>.</li>
+        <li>Créer une branche pour travailler sur une nouvelle fonctionnalité : <code>git checkout -b nouvelle-fonction</code>.</li>
+        <li>Faire des modifications, puis les enregistrer avec <code>git add .</code> et <code>git commit -m "Ajout de nouvelle fonctionnalité"</code>.</li>
+        <li>Envoyer la branche sur GitHub : <code>git push origin nouvelle-fonction</code>.</li>
+        <li>Créer une pull request pour demander la fusion de la branche dans <code>main</code>.</li>
+        <li>Une revue de code est effectuée avant la fusion.</li>
+        <li>Une fois la pull request fusionnée, chaque membre doit synchroniser son dépôt local avec <code>git pull origin main</code> pour récupérer les dernières modifications.</li>
+    </ol>
+    
+    <h2>8. Suppression d’un dépôt</h2>
+    <p><strong>Local :</strong></p>
+    <pre><code>rm -rf .git</code></pre>
+    <p><strong>Sur GitHub :</strong> Aller dans les paramètres du dépôt et cliquer sur "Delete this repository".</p>
+    
+    <h2>9. Commandes essentielles</h2>
+    <ul>
+        <li><code>git status</code> → Vérifier l’état des fichiers</li>
+        <li><code>git log</code> → Voir l’historique des commits</li>
+        <li><code>git diff</code> → Voir les modifications non validées</li>
+        <li><code>ls</code> → Lister les fichiers du répertoire</li>
+        <li><code>cd nom_du_dossier</code> → Changer de répertoire</li>
+        <li><code>pwd</code> → Afficher le chemin du répertoire actuel</li>
+        <li><code>mkdir nom_du_dossier</code> → Créer un nouveau dossier</li>
+        <li><code>rm -rf nom_du_dossier</code> → Supprimer un dossier et son contenu</li>
+        <li><code>touch fichier.txt</code> → Créer un fichier vide</li>
+        <li><code>cat fichier.txt</code> → Afficher le contenu d'un fichier</li>
+        <li><code>nano fichier.txt</code> → Éditer un fichier avec nano</li>
+    </ul>
+</body>
+</html>

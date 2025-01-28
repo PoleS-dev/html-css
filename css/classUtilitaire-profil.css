@@ -1,0 +1,62 @@
+
+
+
+.b-red{
+    border: 1px solid red;
+}
+
+
+.carre{
+   
+  
+    background-color: rgb(227, 227, 112);
+}
+
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+
+.box-img{
+height: 20rem;
+}
+
+.red{
+    background: rgb(36,0,16);
+background: linear-gradient(90deg, rgba(36,0,16,1) 10%, rgba(58,58,224,1) 56%, rgba(201,184,47,1) 93%);
+}
+
+
+h3{
+    background-image: linear-gradient(red, blue);
+    color: transparent;
+    background-clip: text;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+button{
+    padding: 5px;
+    background-color: rgb(162, 238, 238);
+}
+
+
+
+
+
+

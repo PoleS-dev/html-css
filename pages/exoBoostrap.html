@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercices Bootstrap 5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+</head>
+<body class="bg-light">
+
+    <!-- En-tête -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Exercices Pratiques Bootstrap 5</h1>
+        <p>Testez vos compétences avec ces exercices</p>
+    </header>
+
+    <div class="container mt-4">
+
+        <!-- Exercice 1 -->
+        <section class="mb-5">
+            <h2 class="text-primary">1. Créer une Page Web Responsive</h2>
+            <p><strong>Objectif :</strong> Utiliser le système de grille, une image responsive, une navbar et un formulaire.</p>
+            <ul>
+                <li>Créez un fichier <code>page_responsive.html</code>.</li>
+                <li>Ajoutez une **navbar** avec **3 liens** (Accueil, Services, Contact).</li>
+                <li>Ajoutez une **image responsive** centrée.</li>
+                <li>Utilisez **une grille Bootstrap** pour afficher 3 blocs de texte.</li>
+                <li>Ajoutez un **formulaire de contact** avec **un champ email, un champ message et un bouton d'envoi**.</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 2 -->
+        <section class="mb-5">
+            <h2 class="text-primary">2. Transformer un Tableau en Responsive</h2>
+            <p><strong>Objectif :</strong> Créer un tableau **responsive** affichant une liste d’utilisateurs.</p>
+            <ul>
+                <li>Créez un fichier <code>tableau_utilisateurs.html</code>.</li>
+                <li>Ajoutez un tableau avec les colonnes : **ID, Nom, Email, Rôle**.</li>
+                <li>Ajoutez **au moins 4 utilisateurs** en tant que lignes.</li>
+                <li>Utilisez <code>.table-responsive</code> pour rendre le tableau responsive.</li>
+                <li>Ajoutez un **style alterné** sur les lignes avec <code>.table-striped</code>.</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 3 -->
+        <section class="mb-5">
+            <h2 class="text-primary">3. Formulaire avec Icônes et Validation</h2>
+            <p><strong>Objectif :</strong> Créer un **formulaire d'inscription avancé** avec **icônes et validation**.</p>
+            <ul>
+                <li>Créez un fichier <code>formulaire_inscription.html</code>.</li>
+                <li>Ajoutez un champ **Nom**, **Email**, **Mot de passe** avec des icônes.</li>
+                <li>Ajoutez des boutons radio pour **Homme/Femme** et une case à cocher.</li>
+             
+                <li>Ajoutez un **bouton d’envoi stylisé** en <code>.btn-primary</code>.</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 4 -->
+        <section class="mb-5">
+            <h2 class="text-primary">4. Menu de Navigation avec Menu Déroulant</h2>
+            <p><strong>Objectif :</strong> Créer une **navbar responsive** avec un **menu déroulant**.</p>
+            <ul>
+                <li>Créez un fichier <code>navbar_dropdown.html</code>.</li>
+                <li>Ajoutez une **navbar Bootstrap** avec :
+                    <ul>
+                        <li>Un **logo**</li>
+                        <li>**3 liens de menu** (Accueil, Blog, Contact)</li>
+                        <li>Un **menu déroulant "Catégories"**</li>
+                        <li>Un **bouton "Connexion"** à droite</li>
+                    </ul>
+                </li>
+                <li>Ajoutez un **effet sticky en haut de la page** avec <code>.sticky-top</code>.</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 5 -->
+        <section class="mb-5">
+            <h2 class="text-primary">5. Afficher une Carte Produit Responsive</h2>
+            <p><strong>Objectif :</strong> Créer une **fiche produit** utilisant **les cartes Bootstrap**.</p>
+            <ul>
+                <li>Créez un fichier <code>carte_produit.html</code>.</li>
+                <li>Ajoutez une **carte Bootstrap** contenant :
+                    <ul>
+                        <li>Une **image produit** avec <code>.card-img-top</code>.</li>
+                        <li>Un **titre de produit** en <code>.card-title</code>.</li>
+                        <li>Une **description** en <code>.card-text</code>.</li>
+                        <li>Un **prix** en gras.</li>
+                        <li>Un **bouton "Ajouter au panier"** en <code>.btn-success</code>.</li>
+                    </ul>
+                </li>
+                <li>Assurez-vous que la carte **s’adapte bien en mobile et en PC**.</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 6 -->
+        <section class="mb-5">
+            <h2 class="text-primary">6. Afficher des Témoignages en Colonnes</h2>
+            <p><strong>Objectif :</strong> Créer une section **témoignages clients** avec **Bootstrap Grid**.</p>
+            <ul>
+                <li>Créez un fichier <code>temoignages.html</code>.</li>
+                <li>Ajoutez un **titre de section** : “Ce que nos clients disent de nous”.</li>
+                <li>Utilisez **Bootstrap Grid** pour afficher **3 témoignages** avec <code>.col-md-4</code>.</li>
+                <li>Chaque témoignage doit être dans **une carte Bootstrap** contenant :
+                    <ul>
+                        <li>Une **photo de profil ronde** (<code>.rounded-circle</code>).</li>
+                        <li>Un **nom** en <code>.fw-bold</code>.</li>
+                        <li>Un **court message** en <code>.text-muted</code>.</li>
+                    </ul>
+                </li>
+                <li>Les cartes doivent être **alignées en ligne sur PC** et **en colonne sur mobile**.</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 7 -->
+        <section class="mb-5">
+            <h2 class="text-primary">7. Créer un Footer Responsive</h2>
+            <p><strong>Objectif :</strong> Créer un **pied de page responsive** contenant plusieurs colonnes d’information.</p>
+            <ul>
+                <li>Créez un fichier <code>footer_responsive.html</code>.</li>
+                <li>Ajoutez un **footer** avec **3 colonnes** sur grand écran et **1 colonne sur mobile** :
+                    <ul>
+                        <li>📌 **Colonne 1 :** Adresse et contact.</li>
+                        <li>📌 **Colonne 2 :** Liens rapides.</li>
+                        <li>📌 **Colonne 3 :** Icônes des réseaux sociaux.</li>
+                    </ul>
+                </li>
+                <li>Ajoutez un **fond sombre** et alignez le texte au centre en mobile.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer class="text-center mt-5 text-muted py-3">
+        <p>&copy; 2024 Exercices Bootstrap - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

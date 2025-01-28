@@ -195,6 +195,76 @@
               </table>
         </section>
 
+        <section>
+          <h1>Cours sur les Formulaires HTML</h1>
+          <p>Les formulaires en HTML permettent de recueillir des données auprès des utilisateurs. Ils sont définis à l'aide de la balise <code>&lt;form&gt;</code>.</p>
+          
+          <h2>Utilité des attributs et de la balise label</h2>
+          <p>
+              - La balise <code>&lt;label&gt;</code> est utilisée pour associer un texte descriptif à un champ de formulaire.
+              Elle améliore l'accessibilité et l'expérience utilisateur.<br>
+              - Les attributs des champs de formulaire permettent de spécifier des contraintes ou des valeurs par défaut.
+              Ils aident à la validation des données saisies par l'utilisateur.
+          </p>
+          
+          <h2>Attributs importants dans un formulaire</h2>
+          <ul>
+              <li><code>action</code> : Définit l'URL où les données du formulaire seront envoyées.</li>
+              <li><code>method</code> : Spécifie la méthode HTTP utilisée (GET ou POST).</li>
+              <li><code>name</code> : Attribut utilisé pour identifier les champs du formulaire côté serveur.</li>
+              <li><code>required</code> : Indique qu'un champ est obligatoire.</li>
+              <li><code>placeholder</code> : Fournit un texte indicatif dans un champ de saisie.</li>
+              <li><code>min</code> et <code>max</code> : Définissent les valeurs minimales et maximales pour les champs numériques.</li>
+              <li><code>maxlength</code> et <code>minlength</code> : Spécifient la longueur minimale et maximale pour un champ texte.</li>
+              <li><code>value</code> : Définit une valeur par défaut pour un champ.</li>
+          </ul>
+          
+          <h2>Structure de base d'un formulaire</h2>
+          <p>Un formulaire est défini comme suit :</p>
+          <form action="traitement.php" method="post">
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
+              <small>(Champ obligatoire, min 2 caractères)</small><br><br>
+              
+              <label for="age">Âge :</label>
+              <input type="number" id="age" name="age" min="1" max="120" required>
+              <small>(Valeur entre 1 et 120)</small><br><br>
+              
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+              <small>(Champ obligatoire, format email)</small><br><br>
+              
+              <label for="password">Mot de passe :</label>
+              <input type="password" id="password" name="password" required minlength="6">
+              <small>(Minimum 6 caractères)</small><br><br>
+              
+              <label>Genre :</label><br>
+              <input type="radio" id="homme" name="genre" value="homme">
+              <label for="homme">Homme</label>
+              <input type="radio" id="femme" name="genre" value="femme">
+              <label for="femme">Femme</label><br><br>
+              
+              <label for="pays">Pays :</label>
+              <select id="pays" name="pays" required>
+                  <option value="">Sélectionnez votre pays</option>
+                  <option value="france">France</option>
+                  <option value="belgique">Belgique</option>
+                  <option value="suisse">Suisse</option>
+              </select>
+              <small>(Champ obligatoire)</small><br><br>
+              
+              <label for="message">Message :</label><br>
+              <textarea id="message" name="message" rows="4" cols="30" placeholder="Votre message ici..." required></textarea>
+              <small>(Champ obligatoire)</small><br><br>
+              
+              <input type="checkbox" id="conditions" name="conditions" required>
+              <label for="conditions">J'accepte les conditions d'utilisation</label>
+              <small>(Obligatoire)</small><br><br>
+              
+              <input type="submit" value="Envoyer">
+          </form>
+        </section>
+
 
 
 

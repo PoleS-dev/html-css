@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guide des Classes Bootstrap 5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- En-tête -->
+    <header class="bg-primary  text-white  py-4">
+        <h1>Guide des Classes Importantes en Bootstrap 5</h1>
+        <p>Découvrez les classes principales et leur usage en responsive</p>
+    </header>
+
+    <div class="container mt-4">
+
+        <!-- Section sur la grille -->
+        <section class="mb-5">
+            <h2 class="text-primary">1. Système de Grille</h2>
+            <p>
+                Bootstrap utilise un système de grille basé sur <strong>12 colonnes</strong>.
+                Vous pouvez contrôler la taille des colonnes avec des classes comme <code>.col-md-*</code>
+                où <code>md</code> est un point de rupture (responsive) et <code>*</code> est la largeur de la colonne.
+            </p>
+            <p><strong>Responsivité :</strong> Utilisez <code>.col-sm-*</code>, <code>.col-md-*</code>,
+                <code>.col-lg-*</code> pour ajuster la taille selon la largeur de l’écran.</p>
+
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-4 bg-warning p-3">Colonne 1</div>
+                <div class="col-sm-6 col-md-4 bg-info p-3">Colonne 2</div>
+                <div class="col-md-4 bg-success p-3">Colonne 3</div>
+            </div>
+
+            <pre class="bg-dark text-white p-3">
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6 col-md-4 bg-warning"&gt;Colonne 1&lt;/div&gt;
+    &lt;div class="col-sm-6 col-md-4 bg-info"&gt;Colonne 2&lt;/div&gt;
+    &lt;div class="col-md-4 bg-success"&gt;Colonne 3&lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </section>
+
+        <!-- Section sur les boutons -->
+        <section class="mb-5">
+            <h2 class="text-primary">2. Boutons</h2>
+            <p>Bootstrap propose différents styles de boutons prédéfinis :</p>
+            <ul>
+                <li><code>.btn</code> → Classe de base</li>
+                <li><code>.btn-primary</code>, <code>.btn-danger</code>, <code>.btn-success</code> → Styles de couleurs
+                </li>
+                <li><code>.btn-lg</code>, <code>.btn-sm</code> → Tailles</li>
+                <li><code>.btn-outline-*</code> → Boutons avec contours</li>
+            </ul>
+
+            <button class="btn btn-primary">Principal</button>
+            <button class="btn btn-danger btn-lg">Grand Bouton</button>
+            <button class="btn btn-success btn-sm">Petit Bouton</button>
+            <button class="btn btn-outline-warning">Bouton Contour</button>
+
+            <pre class="bg-dark text-white p-3">
+&lt;button class="btn btn-primary"&gt;Principal&lt;/button&gt;
+&lt;button class="btn btn-danger btn-lg"&gt;Grand Bouton&lt;/button&gt;
+&lt;button class="btn btn-success btn-sm"&gt;Petit Bouton&lt;/button&gt;
+&lt;button class="btn btn-outline-warning"&gt;Bouton Contour&lt;/button&gt;
+            </pre>
+        </section>
+
+        <!-- Section sur les alertes -->
+        <section class="mb-5">
+            <h2 class="text-primary">3. Alertes</h2>
+            <p>
+                Les alertes permettent d'afficher des messages colorés pour informer l'utilisateur.
+                Utilisez <code>.alert</code> avec des couleurs comme <code>.alert-success</code>,
+                <code>.alert-danger</code>.
+            </p>
+
+            <div class="alert alert-success">Succès ! Action réalisée.</div>
+            <div class="alert alert-danger">Erreur ! Problème détecté.</div>
+
+            <pre class="bg-dark text-white p-3">
+&lt;div class="alert alert-success"&gt;Succès !&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;Erreur !&lt;/div&gt;
+            </pre>
+        </section>
+
+        <!-- Section sur les cartes -->
+        <section class="mb-5">
+            <h2 class="text-primary">4. Cartes</h2>
+            <p>Les cartes permettent de structurer des blocs d’information avec un design soigné.</p>
+            <p><strong>Responsivité :</strong> Ajoutez <code>.card-img-top</code> pour une image responsive en haut.</p>
+
+            <div style="width: 18rem;" class="card col-lg-6">
+                <img src="/images/cuisine/cooking/cook.png" class="card-img-top" alt="Exemple">
+                <div class="card-body">
+                    <h5 class="card-title">Titre de la carte</h5>
+                    <p class="card-text">Exemple de contenu.</p>
+                </div>
+            </div>
+
+            <pre class="bg-dark text-white p-3">
+&lt;div class="card shadow"&gt;
+    &lt;img src="image.jpg" class="card-img-top"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Titre&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Contenu&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </section>
+
+        <!-- En-tête -->
+
+        <h1>Guide des Barres de Navigation Bootstrap </h1>
+        <p>Découvrez les classes essentielles pour créer des navigations modernes et responsives</p>
+
+
+        <div class="container mt-4">
+
+            <!-- Navbar de base -->
+            <section class="mb-5">
+                <h2 class="text-primary">1. Navbar de Base</h2>
+                <p>La classe <code>.navbar</code> permet de créer une barre de navigation.
+                    Utilisez <code>.navbar-expand-lg</code> pour rendre le menu responsive.</p>
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">MonSite</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarBasic">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarBasic">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <pre class="bg-dark text-white p-3">
+&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;MonSite&lt;/a&gt;
+        &lt;button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarBasic"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarBasic"&gt;
+            &lt;ul class="navbar-nav ms-auto"&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+            </pre>
+            </section>
+
+            <!-- Navbar avec logo et bouton -->
+            <section class="mb-5">
+                <h2 class="text-primary">2. Navbar avec Logo et Bouton</h2>
+                <p>Ajoutez un logo et un bouton avec <code>.btn</code> dans la barre de navigation.</p>
+
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="https://via.placeholder.com/50" alt="Logo"
+                                class="me-2">MonLogo</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarLogo">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarLogo">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-primary ms-3">S'inscrire</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <pre class="bg-dark text-white p-3">
+&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;
+            &lt;img src="logo.png" class="me-2"&gt; MonLogo
+        &lt;/a&gt;
+        &lt;button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarLogo"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarLogo"&gt;
+            &lt;ul class="navbar-nav ms-auto"&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;a href="#" class="btn btn-primary ms-3"&gt;S'inscrire&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+            </pre>
+            </section>
+
+            <!-- Navbar Sticky -->
+            <section class="mb-5">
+                <h2 class="text-primary">3. Navbar Fixe en Haut</h2>
+                <p>Utilisez <code>.fixed-top</code> pour une barre de navigation fixe.</p>
+
+                <nav class="navbar navbar-dark bg-primary fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Fixe en Haut</a>
+                    </div>
+                </nav>
+
+                <pre class="bg-dark text-white p-3">
+&lt;nav class="navbar navbar-dark bg-primary fixed-top"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Fixe en Haut&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+            </pre>
+            </section>
+
+            <!-- Navbar avec Menu déroulant -->
+            <section class="mb-5">
+                <h2 class="text-primary">4. Navbar avec Menu Déroulant</h2>
+                <p>Utilisez <code>.dropdown</code> pour ajouter des sous-menus.</p>
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Menu Déroulant</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarDropdown">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDropdown">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#"
+                                        data-bs-toggle="dropdown">Catégories</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Catégorie 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Catégorie 2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <pre class="bg-dark text-white p-3">
+&lt;a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"&gt;Catégories&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Catégorie 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Catégorie 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+            </section>
+
+        </div>
+
+        <!-- Section sur les formulaires -->
+
+        <div class="container mt-4">
+
+            <!-- Section de base -->
+            <section class="mb-5">
+                <h1>formulaires</h1>
+                <h2 class="text-primary">1. Structure de Base</h2>
+                <p>
+                    Bootstrap fournit une mise en forme de base pour les formulaires en utilisant la classe
+                    <code>.form-control</code>
+                    pour les champs de saisie et <code>.form-label</code> pour les libellés.
+                </p>
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nom</label>
+                        <input type="text" class="form-control" placeholder="Entrez votre nom">
+                    </div>
+                    <button class="btn btn-primary">Envoyer</button>
+                </form>
+
+                <pre class="bg-dark text-white p-3">
+    &lt;form&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label class="form-label"&gt;Nom&lt;/label&gt;
+            &lt;input type="text" class="form-control" placeholder="Entrez votre nom"&gt;
+        &lt;/div&gt;
+        &lt;button class="btn btn-primary"&gt;Envoyer&lt;/button&gt;
+    &lt;/form&gt;
+                </pre>
+            </section>
+
+            <!-- Champs spécifiques -->
+            <section class="mb-5">
+                <h2 class="text-primary">2. Types de Champs</h2>
+                <p>
+                    Bootstrap prend en charge plusieurs types de champs avec <code>.form-control</code>,
+                    qui adapte automatiquement leur apparence.
+                </p>
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="exemple@mail.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" placeholder="********">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Fichier</label>
+                        <input type="file" class="form-control">
+                    </div>
+                </form>
+
+                <pre class="bg-dark text-white p-3">
+    &lt;input type="email" class="form-control" placeholder="exemple@mail.com"&gt;
+    &lt;input type="password" class="form-control" placeholder="********"&gt;
+    &lt;input type="date" class="form-control"&gt;
+    &lt;input type="file" class="form-control"&gt;
+                </pre>
+            </section>
+
+            <!-- Champs avec icônes -->
+            <section class="mb-5">
+                <h2 class="text-primary">3. Champs avec Icônes</h2>
+                <p>Utilisez <code>.input-group</code> pour ajouter des icônes ou du texte avant/après un champ.</p>
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nom d'utilisateur</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" placeholder="Votre pseudo">
+                        </div>
+                    </div>
+                </form>
+
+                <pre class="bg-dark text-white p-3">
+    &lt;div class="input-group"&gt;
+        &lt;span class="input-group-text"&gt;@&lt;/span&gt;
+        &lt;input type="text" class="form-control" placeholder="Votre pseudo"&gt;
+    &lt;/div&gt;
+                </pre>
+            </section>
+
+            <!-- Boutons radio & cases à cocher -->
+            <section class="mb-5">
+                <h2 class="text-primary">4. Boutons Radio & Cases à Cocher</h2>
+                <p>Utilisez <code>.form-check</code> pour aligner correctement les cases et boutons radio.</p>
+
+                <form>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1">
+                        <label for="check1" class="form-check-label">J'accepte les conditions</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" id="radio1">
+                        <label for="radio1" class="form-check-label">Homme</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" id="radio2">
+                        <label for="radio2" class="form-check-label">Femme</label>
+                    </div>
+                </form>
+
+                <pre class="bg-dark text-white p-3">
+    &lt;div class="form-check"&gt;
+        &lt;input type="checkbox" class="form-check-input" id="check1"&gt;
+        &lt;label for="check1" class="form-check-label"&gt;J'accepte les conditions&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input type="radio" class="form-check-input" name="gender" id="radio1"&gt;
+        &lt;label for="radio1" class="form-check-label"&gt;Homme&lt;/label&gt;
+    &lt;/div&gt;
+                </pre>
+            </section>
+
+            <!-- Formulaires Responsives -->
+            <section class="mb-5">
+                <h2 class="text-primary">5. Formulaires Responsives</h2>
+                <p>Utilisez <code>.row</code> et <code>.col-md-*</code> pour organiser les champs en colonnes
+                    adaptatives.</p>
+
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Prénom</label>
+                            <input type="text" class="form-control" placeholder="Votre prénom">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nom</label>
+                            <input type="text" class="form-control" placeholder="Votre nom">
+                        </div>
+                    </div>
+                </form>
+
+                <pre class="bg-dark text-white p-3">
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;input type="text" class="form-control" placeholder="Votre prénom"&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;input type="text" class="form-control" placeholder="Votre nom"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Guide du Responsive Design avec Bootstrap 5</h1>
+        <p>Découvrez comment créer des mises en page adaptatives</p>
+    </header>
+
+    <div class="container mt-4">
+
+        <!-- Système de Grille -->
+        <section class="mb-5">
+            <h2 class="text-primary">1. Le Système de Grille</h2>
+            <p>
+                Bootstrap utilise un système de grille basé sur <strong>12 colonnes</strong>.
+                Les classes <code>.col-*</code> permettent d’adapter la mise en page selon la taille de l’écran.
+            </p>
+            <p><strong>Exemple :</strong> Colonnes qui changent selon la taille de l’écran.</p>
+
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-4 col-lg-3 bg-warning p-3">Colonne 1</div>
+                <div class="col-sm-6 col-md-4 col-lg-3 bg-info p-3">Colonne 2</div>
+                <div class="col-sm-12 col-md-4 col-lg-3 bg-success p-3">Colonne 3</div>
+                <div class="col-sm-12 col-lg-3 bg-danger p-3">Colonne 4</div>
+            </div>
+
+            <pre class="bg-dark text-white p-3">
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6 col-md-4 col-lg-3 bg-warning"&gt;Colonne 1&lt;/div&gt;
+    &lt;div class="col-sm-6 col-md-4 col-lg-3 bg-info"&gt;Colonne 2&lt;/div&gt;
+    &lt;div class="col-sm-12 col-md-4 col-lg-3 bg-success"&gt;Colonne 3&lt;/div&gt;
+    &lt;div class="col-sm-12 col-lg-3 bg-danger"&gt;Colonne 4&lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </section>
+
+        <!-- Images Responsives -->
+        <section class="mb-5">
+            <h2 class="text-primary">2. Images Responsives</h2>
+            <p>Utilisez <code>.img-fluid</code> pour que les images s’adaptent automatiquement à leur conteneur.</p>
+
+            <img src="https://via.placeholder.com/800x400" class="img-fluid" alt="Image Responsive">
+
+            <pre class="bg-dark text-white p-3">
+&lt;img src="image.jpg" class="img-fluid" alt="Image Responsive"&gt;
+            </pre>
+        </section>
+
+        <!-- Alignements et Visibilité -->
+        <section class="mb-5">
+            <h2 class="text-primary">3. Alignements et Visibilité</h2>
+            <p>Bootstrap permet d’afficher ou cacher des éléments selon la taille de l’écran.</p>
+
+            <div class="d-none d-sm-block d-md-none bg-warning p-3">
+                Visible seulement en petit écran
+            </div>
+            <div class="d-none d-md-block d-lg-none bg-info p-3">
+                Visible seulement en écran moyen
+            </div>
+            <div class="d-none d-lg-block bg-success p-3">
+                Visible seulement en grand écran
+            </div>
+
+            <pre class="bg-dark text-white p-3">
+&lt;div class="d-none d-sm-block d-md-none"&gt;Visible en petit écran&lt;/div&gt;
+&lt;div class="d-none d-md-block d-lg-none"&gt;Visible en écran moyen&lt;/div&gt;
+&lt;div class="d-none d-lg-block"&gt;Visible en grand écran&lt;/div&gt;
+            </pre>
+        </section>
+
+        <!-- Navigation Responsive -->
+        <section class="mb-5">
+            <h2 class="text-primary">4. Navigation Responsive</h2>
+            <p>Utilisez <code>.navbar-expand-lg</code> pour une barre de navigation adaptative.</p>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar Responsive</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarResponsive">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <pre class="bg-dark text-white p-3">
+&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Navbar Responsive&lt;/a&gt;
+        &lt;button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarResponsive"&gt;
+            &lt;ul class="navbar-nav ms-auto"&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+            </pre>
+        </section>
+
+        <!-- Tableaux Responsives -->
+        <section class="mb-5">
+            <h2 class="text-primary">5. Tableaux Responsives</h2>
+            <p>Utilisez <code>.table-responsive</code> pour rendre un tableau adaptable sur mobile.</p>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Jean Dupont</td>
+                            <td>jean@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Marie Curie</td>
+                            <td>marie@mail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <pre class="bg-dark text-white p-3">
+&lt;div class="table-responsive"&gt;
+    &lt;table class="table table-bordered"&gt;
+        &lt;thead class="table-dark"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;#&lt;/th&gt;
+                &lt;th&gt;Nom&lt;/th&gt;
+                &lt;th&gt;Email&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;Jean Dupont&lt;/td&gt;
+                &lt;td&gt;jean@mail.com&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+            </pre>
+        </section>
+    </div>
+
+    <!-- Pied de page -->
+    <footer class="text-center mt-5 text-muted py-3">
+        <p>&copy; 2025 Guide Bootstrap </p>
+    </footer>
+
+</body>
+
+</html>
