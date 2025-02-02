@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First vs Desktop First</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: auto;
+            max-width: 800px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .container {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📌 Mobile First vs Desktop First : Quelle approche choisir ?</h1>
+
+    <div class="container">
+        <h2>🚀 1️⃣ Problème : La complexité du Desktop</h2>
+        <p>
+            En <strong>Mobile First</strong>, l’interface est souvent en <strong>colonne</strong>, ce qui est simple à gérer. 
+            Cependant, la version <strong>Desktop</strong> peut nécessiter une mise en page plus complexe avec plusieurs colonnes, un menu latéral, etc.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>❌ 2️⃣ Risque d'erreur en Mobile First</h2>
+        <p>
+            Si on construit une structure en colonne pour mobile et qu’on essaie d’ajouter un <strong>layout Desktop complexe</strong> après, 
+            on risque d’avoir des problèmes avec les styles CSS et des media queries compliqués.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>✅ 3️⃣ Solution : Penser Desktop dès le départ</h2>
+        <p>
+            Pour éviter cela, il est recommandé de :
+        </p>
+        <ul>
+            <li>Prévoir la structure Desktop dès le début</li>
+            <li>Utiliser <strong>Grid</strong> ou <strong>Flexbox</strong> pour organiser les éléments de manière flexible</li>
+            <li>Tester en Mobile et Desktop régulièrement</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>🏗 4️⃣ Exemple de Code : Desktop-First</h2>
+        <pre>
+        /* 💻 Desktop - Mise en page en grille */
+        main {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+        }
+
+        /* 📲 Mobile - Ajustement en colonne */
+        @media (max-width: 768px) {
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+            .sidebar {
+                display: none; /* Masquer la sidebar sur mobile */
+            }
+        }
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2>🏆 5️⃣ Comparaison Mobile First vs Desktop First</h2>
+        <table>
+            <tr>
+                <th>Approche</th>
+                <th>Avantages</th>
+                <th>Inconvénients</th>
+            </tr>
+            <tr>
+                <td><strong>Mobile First</strong></td>
+                <td>
+                    ✅ Optimisé pour le SEO <br>
+                    ✅ Meilleure compatibilité mobile <br>
+                    ✅ Ajout progressif des styles
+                </td>
+                <td>
+                    ❌ Difficile si Desktop est complexe <br>
+                    ❌ Nécessite plus de réflexion en amont
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Desktop First</strong></td>
+                <td>
+                    ✅ Plus simple pour layouts complexes <br>
+                    ✅ Plus intuitif pour le design Desktop <br>
+                    ✅ Facilite la gestion des grands écrans
+                </td>
+                <td>
+                    ❌ Peut ralentir le chargement mobile <br>
+                    ❌ Nécessite plus de media queries `max-width`
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>🔥 Conclusion</h2>
+        <p>
+            📌 <strong>Si la version Desktop est très différente de Mobile</strong> → <strong>Commencer en Desktop First</strong> puis adapter pour mobile. <br>
+            📌 <strong>Si le design est similaire sur toutes les tailles</strong> → <strong>Utiliser Mobile First</strong> et adapter avec `min-width`.
+        </p>
+        <p>🚀 L’essentiel est de <strong>bien penser la structure HTML</strong> dès le début pour éviter des modifications compliquées plus tard !</p>
+    </div>
+
+</body>
+</html>

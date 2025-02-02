@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonnes Pratiques en CSS</title>
+
+    <!-- ✅ Importation de fichiers CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <style>
+        /* Styles internes pour améliorer la mise en page du cours */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+           margin: auto;
+            max-width: 900px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📌 Bonnes Pratiques en CSS + Importation</h1>
+
+    <div class="container">
+        <h2>🚀 1. Organisation des fichiers CSS</h2>
+        <h3>✅ Séparer les fichiers CSS</h3>
+        <p>Il est recommandé d'organiser ses styles en plusieurs fichiers CSS :</p>
+        <pre>
+        📂 mon-projet/
+        ├── index.html
+        ├── css/
+        │   ├── styles.css       /* Styles généraux */
+        │   ├── responsive.css    /* Styles pour le responsive */
+        │   ├── theme.css         /* Palette de couleurs et thèmes */
+        │   ├── components.css    /* Boutons, cartes, etc. */
+        </pre>
+
+        <h3>✅ Importer les fichiers CSS dans HTML</h3>
+        <p>Dans le fichier <code>index.html</code>, ajoutez :</p>
+        <pre>
+        &lt;link rel="stylesheet" href="css/styles.css"&gt;
+        &lt;link rel="stylesheet" href="css/responsive.css"&gt;
+        </pre>
+
+        <h3>✅ Importer un fichier CSS dans un autre CSS</h3>
+        <p>Dans <code>styles.css</code>, utilisez :</p>
+        <pre>
+        @import url("theme.css");
+        @import url("components.css");
+        </pre>
+        <p>📌 **Attention !** <code>@import</code> peut ralentir le chargement de la page. Privilégiez <code>&lt;link&gt;</code> dans le HTML.</p>
+    </div>
+
+    <div class="container">
+        <h2>🎨 2. Palette de couleurs avec des variables CSS</h2>
+        <p>Définissez vos couleurs dans <code>theme.css</code> :</p>
+        <pre>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--primary-color);
+        }
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2>📏 3. Bonnes Pratiques pour la Mise en Page</h2>
+        <h3>✅ Utiliser Flexbox ou Grid</h3>
+        <p>Évitez les <code>float</code> et privilégiez <strong>Flexbox</strong> ou <strong>CSS Grid</strong>.</p>
+
+        <h3>Exemple avec Flexbox :</h3>
+        <pre>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        </pre>
+
+        <h3>Exemple avec CSS Grid :</h3>
+        <pre>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2>📲 4. Responsive Design avec Media Queries</h2>
+        <h3>✅ Utilisation de Media Queries dans <code>responsive.css</code></h3>
+        <pre>
+        /* Mobile First */
+        body {
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                font-size: 18px;
+            }
+        }
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2>🛠 5. Optimisation des Performances</h2>
+
+        <h3>✅ Minifier et compresser le CSS</h3>
+        <p>Utilisez des outils comme <code>CSSNano</code> ou <code>PurgeCSS</code> pour réduire la taille des fichiers.</p>
+
+        <h3>✅ Éviter les sélecteurs trop complexes</h3>
+        <p>Préférez :</p>
+        <pre>
+        .btn-primary {
+            background: blue;
+        }
+        </pre>
+        <p>Plutôt que :</p>
+        <pre>
+        div.container nav ul li a.btn-primary {
+            background: blue;
+        }
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2>🏆 6. Résumé des Bonnes Pratiques en CSS</h2>
+        <table>
+            <tr>
+                <th>Bonnes pratiques</th>
+                <th>Explication</th>
+            </tr>
+            <tr>
+                <td>📂 Séparer le CSS en plusieurs fichiers</td>
+                <td>Facilite la gestion et améliore la maintenabilité</td>
+            </tr>
+            <tr>
+                <td>🎨 Utiliser des variables CSS</td>
+                <td>Permet un design plus cohérent et facile à modifier</td>
+            </tr>
+            <tr>
+                <td>📏 Privilégier Flexbox et Grid</td>
+                <td>Permet une mise en page moderne et fluide</td>
+            </tr>
+            <tr>
+                <td>📲 Adopter le Responsive Design</td>
+                <td>Utiliser Media Queries dans un fichier dédié</td>
+            </tr>
+            <tr>
+                <td>⚡ Optimiser les performances</td>
+                <td>Minifier, compresser et éviter les sélecteurs lourds</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>🔥 Conclusion</h2>
+        <p>En appliquant ces bonnes pratiques, vous garantissez un <strong>CSS performant, propre et maintenable</strong> !</p>
+    </div>
+
+</body>
+</html>

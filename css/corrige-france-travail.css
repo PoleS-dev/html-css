@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body nav{
+    min-width: 320px;
+}
+
+
+
+
+
+/* *******HEADER****** */
+
+
+/* nav */
+.burger{
+    height: 30px;
+}
+
+#burger1{
+    display: none;
+}
+
+.carre{
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+
+
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.div-burger{
+    display: flex;
+  
+}
+
+.div-gif{
+    /* flex 1 fonctionne quand la div container est en display flex la div flex1 prend tout l'espace disponible */
+    flex: 1;
+    background-color: rgb(132, 234, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* bandeau */
+
+.bandeau{
+    background-color: rgb(234, 147, 147);
+    height: 20rem;
+    width: 100%;
+    margin-top: 2.3rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.gray{
+    height: 6rem;
+    width: 100%;
+    background-color: rgba(108, 104, 104, 0.315);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+/* FORM  */
+form{
+    display: flex;
+    gap: 2px;
+}
+
+/* je selectionne les div de la balise form */
+form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    padding: 2px;
+    background-color: rgb(81, 65, 65);
+    color: aliceblue;
+}
+
+.circle{
+    border-radius: 50%;
+    height:4rem;
+    width:4rem;
+    background-color: rgb(226, 32, 32);
+
+}
+
+
+.gray-content{
+    position: relative;
+}
+.gray-content p{
+    text-align: center;
+    width: 100%;
+
+}
+.content-circle{
+   
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+   
+  width: 100%;
+  top: -35%; /* Aligné sur la bordure top */
+
+
+}
+
+
+
+/*************** MAIN ******************/
+
+main h2{
+    text-align: center;
+} 
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.card{
+    min-width: 20rem;
+    min-height: 25rem;
+    background-color: rgb(234, 126, 126);
+    border: 2px solid red;
+}
+
+
+
+/* RESPONSIVE */
+
+/* responsive de 1 à 700px au dela, les changements ne seront pas pris en compte  */
+
+@media screen and (max-width:700px) {
+
+    #burger1{
+        display: block;
+    }
+
+    #burger2{
+        display: none;
+    }
+
+   form{
+    /* je souhaite que mes elements soient en colonne */
+    flex-direction: column;
+    position: relative;
+   }
+   form div{
+    /* je mets une largeur de 80% pour laisser la place au bonton */
+    width: 80%;
+   }
+
+   .button{
+    /* je positionne mon bouton grâce a position absolute cette div est dépendante de la div relative parente  */
+    width: 20%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+   }
+
+   .content-circle{
+    justify-content: space-around;
+   }
+/* secltion de plusieurs class et on leur donne la même propiété */
+   .gray-content2,.gray-content3,
+   .gray-content4,
+   .gray-content5,
+   .gray-content6{
+    display: none;
+   }
+}
+@media screen and (max-width: 848px) {
+    .card-container{
+        width: 90%;
+    }
+    /* je souhhaite que card prenne 100% de l'espace disponible entre 1 et 848px et changement de height */
+    .card{
+     width: 100%;
+     height: 30rem;
+    }
+    
+}
+

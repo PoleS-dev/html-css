@@ -1,0 +1,161 @@
+:root{
+    --red:222, 122, 123;
+    --green: 25,156,113;
+}
+
+*{
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 300px;
+}
+
+
+/*********** nav*********** */
+.logo{
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid red;
+}
+
+.burger{
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgb(24, 23, 23);
+}
+#burgerResponsive{
+    display: none;
+}
+
+/* ********bandeau******** */
+.bandeau-travail{
+    height: 20rem;
+    background-color: rgb(var(--red));
+    position: relative;
+}
+
+.div-green{
+    width: 10rem;
+    height: 5rem;
+    background-color: rgb(var(--green));
+    position: absolute;
+    right: 0;
+    top: 38%;
+  
+}
+
+.div-green div{
+    width: 80%;
+    height: 1.5rem;
+    background-color: rgb(225, 231, 100);
+    margin-top: 0.5rem;
+}
+
+.redbutton{
+
+    background-color: brown;
+    height: 100%;
+    width: 2rem;
+
+}
+
+.circle-red{
+    width: 4.2rem;
+    height: 4.2rem;
+    background-color: brown;
+}
+.gray{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(16, 16, 16,0.3);
+    position: absolute;
+    bottom: 0;
+    
+}
+
+/* ******************main**************** */
+
+.responsive-apparition{
+    display: none;
+    background-color: rgb(var(--green));
+}
+.wrap{
+    flex-wrap: wrap;
+}
+
+.card-container{
+    width: 80%;
+}
+@media screen and (min-width:833px) {
+    
+    .card{
+        min-width: 15rem;
+        max-width: 20rem;
+        padding: 10px;
+    }
+    .card p{
+        width: 100%;
+    
+
+    }
+}
+
+/* reponsive  */
+
+@media screen and (max-width:832px) {
+    #burgerDesktop{
+        display: none;
+    }
+    .gif{
+        display: none;
+    }
+    #burgerResponsive{
+        display: block;
+    }
+    
+    
+    /* ****bandeau**** */
+    form{
+        position: relative;
+        flex-direction: column;
+    }
+
+    form input{
+
+        width: 80%;
+
+    }
+
+    form button{
+        right: 0;
+        position: absolute;
+        width: 20% ;
+    }
+
+    #circle-2,#circle-3,#circle-4,.div-green{
+        display: none;
+    }
+
+
+    /**************** main************* */
+
+    .responsive-apparition{
+        display: block;
+    }
+
+    .card{
+        width: 100% ;
+    }
+    .card p{
+        width: 50%;
+        margin: auto;
+    }
+    
+
+
+
+}
