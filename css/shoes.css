@@ -22,13 +22,6 @@ body{
     position: relative;
 }
 
-nav{
- 
-    position: absolute;
-
-  
-}
-
 h1{
     color: rgb(var(--orange));
 }
@@ -53,6 +46,42 @@ section{
     /* height: 25rem; */
     padding: 10px;
 }
+
+
+/* HEADER */
+
+header{
+    display: flex;
+}
+
+.header__logo,.header__search{
+    flex-grow: 1;
+}
+
+
+.burger img{
+    height: 2rem;
+    display: none;
+}
+
+nav{
+    border: 1px solid red;
+    flex-grow: 3;
+
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+li{
+    list-style: none;
+}
+
+
+
+
 /********************** MODAL************************ */
 .modal{
     display: flex;
@@ -301,6 +330,41 @@ button{
         width: 100%;
     }
 
+  
+
+    ul{
+        flex-direction: column;
+        align-items: start;
+        padding: 10px;
+    }
+
+header img{
+    display: block;
+}
+.burger img{
+display: block;
+
+}
+nav{
+position: absolute;
+top: 2rem;
+visibility: hidden;
+}
+    /* nav{
+        position: absolute;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        height: 100%;
+        top: 2rem;
+        /* visibility: hidden; */
+        /* width: 200px; */
+    /* } */
+    /* nav div{
+        cursor: pointer;
+        text-align: end;
+    } */
+
     .footer-section-text{
         flex-direction: column;
     }
@@ -350,6 +414,11 @@ button{
 
 }
 
+@media screen and (min-width: 577px) {
+
+    
+}
+
 
   
   /* Small devices (tablets) */
@@ -367,6 +436,7 @@ button{
         padding: 0;
         
     }
+  
 
     section{
         width: 80%;
@@ -430,6 +500,9 @@ button{
     
     }
 
+  
+
+
 }
 
 
@@ -439,6 +512,9 @@ button{
     body {
       background-color: lightgray;
     
+    }
+    .nav__close,.burger{
+    display: none;
     }
 
     main{

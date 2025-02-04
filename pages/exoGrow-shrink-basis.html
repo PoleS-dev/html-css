@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices Flexbox - flex-grow, flex-basis, flex-shrink</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+      margin: auto;
+            max-width: 900px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .flex-container {
+            display: flex;
+            width: 100%;
+            border: 2px solid #3498db;
+            padding: 10px;
+            background: #e3f2fd;
+        }
+        .box {
+            background: lightcoral;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .box-1{
+            width: 200px;
+        }
+        /* Exercice 1 - flex-grow */
+        .grow-1 { flex-grow: 1; }
+        .grow-2 { flex-grow: 2; }
+
+        /* Exercice 2 - flex-basis */
+        .basis-100 { flex-basis: 300px; }
+        .basis-200 { flex-basis: 200px; }
+
+        /* Exercice 3 - flex-shrink */
+        .shrink-0 { flex-shrink: 0; }
+        .shrink-1 { flex-shrink: 1; }
+        .shrink-2 { flex-shrink: 3; }
+
+        /* Exercice 4 - flex combiné */
+        .flex-mix {
+            flex: 1 1 150px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 150px */
+
+
+/* 1 flex-grow l'élément grandit pour occuper l'espace disponible
+si plusieurs éléments ont flex-grow 1 ils grandissent de la même manière
+
+si un éléménts a un flex-grow 2 il grandira 2foix plus vite 
+
+ */
+ /* 
+ flex-shrink s'il manque de l'espace il peut reduire sa taille si flex-shrink est à  0 l'élement ne rétrécira jamais
+ 
+ */
+
+ /* flex-basis 150px la taille initiale de l'élement avant répartition : l'élémént commence avec une largeur de 150px en suite flex grow et flex shrink ajuste la taille au besoin. 
+ 
+ */
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📌 Exercices sur flex-grow, flex-basis et flex-shrink</h1>
+
+    <div class="container">
+        <h2>📝 Exercice 1 : Comprendre `flex-grow`</h2>
+        <p>Modifiez les valeurs de `flex-grow` et observez comment les boîtes occupent l’espace disponible.</p>
+        <div class="flex-container">
+            <div class="box grow-1">grow-1</div>
+            <div class="box grow-2">grow-2</div>
+            <div class="box grow-1">grow-1</div>
+        </div>
+        <pre>
+        .grow-1 { flex-grow: 1; }
+        .grow-2 { flex-grow: 2; }
+        </pre>
+        <p>✅ **Question : Que se passe-t-il si toutes les boîtes ont `flex-grow: 1` ?**</p>
+    </div>
+
+    <div class="container">
+        <h2>📝 Exercice 2 : Comprendre `flex-basis`</h2>
+        <p>Modifiez `flex-basis` pour voir comment la taille de départ des éléments est définie.</p>
+        <div class="flex-container">
+            <div class="box basis-100">100px</div>
+            <div class="box basis-200">200px</div>
+            <div class="box basis-100">100px</div>
+        </div>
+        <pre>
+        .basis-100 { flex-basis: 100px; }
+        .basis-200 { flex-basis: 200px; }
+        </pre>
+        <p>✅ **Question : Que se passe-t-il si `flex-basis: auto;` est utilisé ?**</p>
+    </div>
+
+    <div class="container">
+        <h2>📝 Exercice 3 : Comprendre `flex-shrink`</h2>
+        <p>Essayez de réduire la taille de l’écran pour voir quelles boîtes rétrécissent en premier.</p>
+        <div class="flex-container">
+            <div class="box box-1 shrink-0">shrink-0</div>
+            <div class="box box-1 shrink-1">shrink-1</div>
+            <div class="box box-1 shrink-2">shrink-2</div>
+        </div> box-1
+        <pre>
+        .shrink-0 { flex-shrink: 0; } /* Ne rétrécit jamais */
+        .shrink-1 { flex-shrink: 1; } /* Rétrécit normalement */
+        .shrink-2 { flex-shrink: 2; } /* Rétrécit plus vite */
+        </pre>
+        <p>✅ **Question : Que se passe-t-il si toutes les boîtes ont `flex-shrink: 0;` ?**</p>
+    </div>
+
+    <div class="container">
+        <h2>📝 Exercice 4 : Combinaison `flex-grow`, `flex-shrink`, `flex-basis`</h2>
+        <p>Observez comment ces valeurs interagissent ensemble.</p>
+        <div class="flex-container">
+            <div class="box flex-mix">flex: 1 1 150px;</div>
+            <div class="box flex-mix">flex: 1 1 150px;</div>
+            <div class="box flex-mix">flex: 1 1 150px;</div>
+        </div>
+        <pre>
+        .flex-mix {
+            flex: 1 1 150px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 150px */
+        }
+        </pre>
+        <p>✅ **Question : Que se passe-t-il si `flex-shrink: 0;` est ajouté ?**</p>
+    </div>
+
+    <div class="container">
+        <h2>🏆 Conclusion</h2>
+        <ul>
+            <li>✔️ **`flex-grow`** → Permet aux éléments de **grandir**.</li>
+            <li>✔️ **`flex-basis`** → Définit la **taille initiale**.</li>
+            <li>✔️ **`flex-shrink`** → Permet aux éléments de **rétrécir** si l’espace manque.</li>
+        </ul>
+        <p>📌 **Essaye de modifier les valeurs et vois comment Flexbox réagit !** 🚀</p>
+    </div>
+
+</body>
+</html>

@@ -150,13 +150,7 @@ grid-template-rows: 100px;
     background-color: #a2cfad;
 }
 
-.item1 {
-    grid-area: a;
-    align-self: center;
-    justify-self: center;
-    background-color: #e7a132;
-    padding: 20px;
-  }
+
 
 
   /* ****** exercice 2 ************ */
